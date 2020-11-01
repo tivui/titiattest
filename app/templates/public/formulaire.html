@@ -6,6 +6,9 @@
 .formulaire {
 margin-top:20px;
 }
+.retour {
+margin-left:20px;
+}
 {% endblock %}
 
 {% block contenu %}
@@ -44,7 +47,7 @@ margin-top:20px;
             <label for="heure_de_depart"><b>Heure et date de départ</b></label>
                         <input id="heure_de_depart" type="datetime-local" name="heure_de_depart">
         </div>
-        <div class="form-group col-md-4" id="date_de_retour" style="display:block;">
+        <div class="form-group col-md-4 retour" id="date_de_retour" style="display:block;">
             <label for="heure_de_retour"><b>Heure de retour</b></label>
                         <input id="heure_de_retour" type="time" name="heure_de_retour">
         </div>
