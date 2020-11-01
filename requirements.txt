@@ -13,7 +13,6 @@ MarkupSafe==1.1.1
 Pillow==8.0.1
 python-docx==0.8.10
 pytz==2020.1
-pywin32==228
 raw-zlib==0.1.15
 six==1.15.0
 Werkzeug==1.0.1
