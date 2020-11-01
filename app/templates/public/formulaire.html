@@ -33,7 +33,7 @@ margin-left:20px;
     <div class="form-row">
         <div class="form-group col-md-10">
             <label for="motif"><b>Ton motif de sortie</b></label>
-					<select class='form-control' name="motif" id="motif"  onclick="Afficher_Dates();" required >
+					<select class='form-control' name="motif" id="motif"  onchange="Afficher_Dates();" required >
                         <option value="courses">Déplacements pour faire des courses de première necessité.</option>
                         <option value="medical">Consultation médicale ou achat de médicaments.</option>
                         <option value="sport">Déplacement pour activité sportive ou promenade chien.</option>
@@ -48,11 +48,9 @@ margin-left:20px;
                         <input id="heure_de_depart" type="datetime-local" name="heure_de_depart">
         </div>
         <div class="form-group col-md-4 retour" id="date_de_retour" style="display:block;">
-            <label for="heure_de_retour"><b>Heure de retour</b></label>
+            <label for="heure_de_retour"><b>Heure de retour (optionnelle)</b></label>
                         <input id="heure_de_retour" type="time" name="heure_de_retour">
         </div>
-
-
     </div>
 
 <input  type="submit" class="btn btn-success" value="Valider les informations" >
