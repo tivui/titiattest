@@ -2,12 +2,8 @@
 from app import app
 from flask import render_template,request
 from docxtpl import DocxTemplate
-import zlib
 import zipfile
-import sys
-import comtypes.client
-import pythoncom
-import win32com.client
+
 
 
 dico_motifs={"courses":"Déplacements pour effectuer des achats de fournitures nécessaires à l'activité professionnelle, des achats de première nécessité dans des établissements dont les 3 activités demeurent autorisées, le retrait de commande et les livraisons à domicile.",
