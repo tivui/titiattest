@@ -25,16 +25,19 @@ def creation_attestation():
     reponse = request.form
     heure_de_depart = reponse['heure_de_depart']
     heure_de_retour = reponse['heure_de_retour']
+    print(heure_de_retour)
     nom = reponse['nom']
     motif = reponse['motif']
     nb_attestations=1
     heure_dep = int(heure_de_depart[11:13])
     min_dep = int(heure_de_depart[14:16])
+    heure_limite_ret=12
     if heure_de_retour:
         heure_ret=int(heure_de_retour[0:2])
         min_ret=int(heure_de_retour[3:5])
         difference=((heure_ret*60)+min_ret)-((heure_dep*60)+min_dep)
         nb_attestations=difference // 45
+        heure_limite_ret=int(heure_de_retour[0:2])
     document=DocxTemplate(r"app/static/text/attestation_deplacement_"+nom+".docx")
     file_names=[]
     for i in range(nb_attestations):
@@ -91,4 +94,4 @@ def creation_attestation():
         zf.write(path+file_name, file_name, compress_type=compression)
     # Don't forget to close the file!
     zf.close()
-    return render_template("public/creation_attestation.html",nb_attestations=nb_attestations)
+    return render_template("public/creation_attestation.html",nb_attestations=nb_attestations,heure_limite_ret=heure_limite_ret,heure_dep=heure_dep)
