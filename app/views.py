@@ -35,11 +35,11 @@ def creation_attestation():
         min_ret=int(heure_de_retour[3:5])
         difference=((heure_ret*60)+min_ret)-((heure_dep*60)+min_dep)
         nb_attestations=difference // 45
-    document=DocxTemplate(r"C:\Users\Asus\Documents\Formations\Python\Attestation\app\static\text\attestation_deplacement_"+nom+".docx")
+    document=DocxTemplate(r"\static\text\attestation_deplacement_"+nom+".docx")
     file_names=[]
     for i in range(nb_attestations):
-        document.save(r"C:\Users\Asus\Documents\Formations\Python\Attestation\app\static\text\Nouvelle_Attestation_"+str(i+1)+".docx")
-        document_2=DocxTemplate(r"C:\Users\Asus\Documents\Formations\Python\Attestation\app\static\text\Nouvelle_Attestation_"+str(i+1)+".docx")
+        document.save(r"\static\text\Nouvelle_Attestation_"+str(i+1)+".docx")
+        document_2=DocxTemplate(r"\static\text\Nouvelle_Attestation_"+str(i+1)+".docx")
         heure_en_minutes=((heure_dep*60)+min_dep)+(i*45)
         heure_h=heure_en_minutes//60
         heure_min=heure_en_minutes%60
@@ -66,7 +66,7 @@ def creation_attestation():
                 for j in range(len(inline)):
                     text = inline[j].text.replace('###', date)
                     inline[j].text=text
-        document_2.save(r"C:\Users\Asus\Documents\Formations\Python\Attestation\app\static\text\Nouvelle_Attestation_"+str(i+1)+".docx")
+        document_2.save(r"\static\text\Nouvelle_Attestation_"+str(i+1)+".docx")
         filename="Nouvelle_Attestation_"+str(i+1)+".docx"
         file_names.append(filename)
         """Pour convertir en pdf avec Word Office versions récentes"""
@@ -83,8 +83,8 @@ def creation_attestation():
     # or zipfile.ZIP_STORED to just store the file
     compression = zipfile.ZIP_DEFLATED
     # create the zip file first parameter path/name, second mode
-    path="C:\\Users\\Asus\\Documents\\Formations\\Python\\Attestation\\app\\static\\text\\"
-    zf = zipfile.ZipFile(r"C:\Users\Asus\Documents\Formations\Python\Attestation\app\static\text\Attestations.zip", mode="w")
+    path=r"\static\text\"
+    zf = zipfile.ZipFile(r"\text\Attestations.zip", mode="w")
     for file_name in file_names:
         # Add file to the zip file
         # first parameter file to zip, second filename in zip
