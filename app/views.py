@@ -94,4 +94,5 @@ def creation_attestation():
         zf.write(path+file_name, file_name, compress_type=compression)
     # Don't forget to close the file!
     zf.close()
+    print(heure_dep)
     return render_template("public/creation_attestation.html",nb_attestations=nb_attestations,heure_limite_ret=heure_limite_ret,heure_dep=heure_dep)

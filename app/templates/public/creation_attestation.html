@@ -12,19 +12,19 @@ h1 {
 
 {% block contenu %}
 <center>
-    {% if nb_attestations==1 %}
+    {% if (heure_limite_ret<6) or (heure_limite_ret>21) or (heure_dep<6) or (heure_dep>21) %}
+        <div class="alert alert-danger" role="alert">
+          Impossible de créer une attestation qui rentre dans les horaires du couvre-feu. Désolé.
+        </div>
+        <a href="javascript:history.back()" method="post">
+            <button type="submit" class="btn btn-sm btn-outline-secondary">Revenir au formulaire</button>
+        </a>
+    {% elif nb_attestations==1 %}
         <h1>Attestation créée</h1>
         <a class="btn btn-primary" href="{{ url_for('static',filename='text/Nouvelle_Attestation_1.docx') }}" download>Cliquer ici pour la télécharger</a>
     {% elif nb_attestations<1 %}
         <div class="alert alert-danger" role="alert">
           L'heure de retour doit être postérieure à l'heure de départ.
-        </div>
-        <a href="javascript:history.back()" method="post">
-            <button type="submit" class="btn btn-sm btn-outline-secondary">Revenir au formulaire</button>
-        </a>
-    {% elif (heure_limite_ret<6) or (heure_limite_ret>21) or (heure_dep<6) or (heure_dep>21) %}
-        <div class="alert alert-danger" role="alert">
-          Impossible de créer une attestation qui rentre dans les horaires du couvre-feu. Désolé.
         </div>
         <a href="javascript:history.back()" method="post">
             <button type="submit" class="btn btn-sm btn-outline-secondary">Revenir au formulaire</button>
