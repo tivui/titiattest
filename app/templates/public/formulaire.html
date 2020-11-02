@@ -34,9 +34,9 @@ margin-left:20px;
         <div class="form-group col-md-10">
             <label for="motif"><b>Ton motif de sortie</b></label>
 					<select class='form-control' name="motif" id="motif"  onchange="Afficher_Dates();" required >
+                        <option value="sport">Déplacement pour activité sportive ou promenade chien.</option>
                         <option value="courses">Déplacements pour faire des courses de première necessité.</option>
                         <option value="medical">Consultation médicale ou achat de médicaments.</option>
-                        <option value="sport">Déplacement pour activité sportive ou promenade chien.</option>
                         <option value="justice">Convocation judiciaire ou administrative et pour se rendre dans un service public.</option>
                     </select>
         </div>
@@ -63,7 +63,8 @@ margin-left:20px;
             {document.getElementById("date_de_retour").style.display='block';}
         else if (choice_value=="courses")
             {document.getElementById("date_de_retour").style.display='block';}
-        else {document.getElementById("date_de_retour").style.display='none';}
+        else {document.getElementById("date_de_retour").style.display='none';
+              document.getElementById("heure_de_retour").value='null';}
         }
     window.addEventListener("load", function() {
         var now = new Date();

@@ -14,7 +14,7 @@ h1 {
 <center>
     {% if nb_attestations==1 %}
         <h1>Attestation créée</h1>
-        <a class="btn btn-primary" href="{{ url_for('static',filename='text/Nouvelle_Attestation_1.docx') }}" download>Cliquer ici pour télécharger la nouvelle attestation</a>
+        <a class="btn btn-primary" href="{{ url_for('static',filename='text/Nouvelle_Attestation_1.docx') }}" download>Cliquer ici pour la télécharger</a>
     {% elif nb_attestations<1 %}
         <div class="alert alert-danger" role="alert">
           L'heure de retour doit être postérieure à l'heure de départ.
@@ -31,7 +31,7 @@ h1 {
         </a>
     {% else %}
         <h1>Attestations créées ({{nb_attestations}})</h1>
-        <a class="btn btn-primary" href="{{ url_for('static',filename='text/Attestations.zip') }}" download>Cliquer ici pour télécharger les {{nb_attestations}} nouvelles attestations</a>
+        <a class="btn btn-primary" href="{{ url_for('static',filename='text/Attestations.zip') }}" download>Cliquer ici pour les télécharger</a>
     {% endif %}
 
 </center>
