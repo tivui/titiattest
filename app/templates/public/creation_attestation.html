@@ -12,7 +12,7 @@ h1 {
 
 {% block contenu %}
 <center>
-    {% if (heure_limite_ret<6) or (heure_limite_ret>21) or (heure_dep<6) or (heure_dep>21) %}
+    {% if (heure_limite_ret<6) or (heure_limite_ret>=21) or (heure_dep<6) or (heure_dep>=21) %}
         <div class="alert alert-danger" role="alert">
           Impossible de créer une attestation qui rentre dans les horaires du couvre-feu. Désolé.
         </div>
