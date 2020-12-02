@@ -8,7 +8,7 @@ import zipfile
 
 dico_motifs={"courses":"Déplacements pour effectuer des achats de fournitures nécessaires à l'activité professionnelle, des achats de première nécessité dans des établissements dont les 3 activités demeurent autorisées, le retrait de commande et les livraisons à domicile.",
             "medical":"Consultations, examens et soins ne pouvant être ni assurés à distance ni différés et l’achat de médicaments",
-            "sport":"Déplacements brefs, dans la limite d'une heure quotidienne et dans un rayon maximal d'un kilomètre autour du domicile, liés soit à l'activité physique individuelle des personnes, à l'exclusion de toute pratique sportive collective et de toute proximité avec d'autres personnes, soit à la promenade avec les seules personnes regroupées dans un même domicile, soit aux besoins des animaux de compagnie.",
+            "sport":"Déplacements en plein air ou vers un lieu de plein air, sans changement du lieu de résidence, dans la limite de trois heures quotidiennes et dans un rayon maximal de vingt kilomètres autour du domicile, liés soit à l'activité physique ou aux loisirs individuels, à l'exclusion de toute pratique sportive collective et de toute proximité avec d'autres personnes, soit à la promenade avec les seules personnes regroupées dans un même domicile, soit aux besoins des animaux de compagnie.",
             "justice":"Convocation judiciaire ou administrative et pour se rendre dans un service public"
             }
 
